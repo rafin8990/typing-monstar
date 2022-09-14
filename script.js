@@ -92,7 +92,7 @@ const gameOver = () => {
   `;
   
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, Math.round(timeTaken), errorCount);
 
   // restart everything
   startTime = 0;
