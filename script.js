@@ -15,7 +15,7 @@ let questionText = "";
 fetch("./texts.json")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data)
+    // console.log(data)
     questionText = data[Math.floor(Math.random() * data.length)];
     question.innerHTML = questionText;
   });
@@ -114,11 +114,9 @@ const start = () => {
     if (count === 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
       clearInterval(startCountdown);
-     
-    
       startTime = new Date().getTime();
       
     }
